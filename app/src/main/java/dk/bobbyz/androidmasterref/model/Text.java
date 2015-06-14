@@ -3,7 +3,7 @@ package dk.bobbyz.androidmasterref.model;
 /**
  * Created by Bobby on 05-03-2015.
  */
-public class Tekst {
+public class Text {
 
     private int id;
     private String tekst;
@@ -16,22 +16,22 @@ public class Tekst {
         this.id = id;
     }
 
-    public String getTekst() {
+    public String getText() {
         return tekst;
     }
 
-    public void setTekst(String tekst) {
+    public void setText(String tekst) {
         this.tekst = tekst;
     }
 
-    public Tekst() {}
+    public Text() {}
 
-    public Tekst(int id, String tekst) {
+    public Text(int id, String tekst) {
         this.id = id;
         this.tekst = tekst;
     }
 
-    public Tekst(String tekst) {
+    public Text(String tekst) {
         this.tekst = tekst;
     }
 

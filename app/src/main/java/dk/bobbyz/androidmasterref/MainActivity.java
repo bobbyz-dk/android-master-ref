@@ -12,48 +12,48 @@ import android.widget.ListView;
 
 import java.util.List;
 
-import dk.bobbyz.androidmasterref.dao.TekstDao;
-import dk.bobbyz.androidmasterref.model.Tekst;
+import dk.bobbyz.androidmasterref.dao.TextDao;
+import dk.bobbyz.androidmasterref.model.Text;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    EditText txtTekst;
-    Button btnGem;
+    EditText txtText;
+    Button btnSave;
     ListView list;
 
-    TekstDao tekstDao;
+    TextDao textDao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtTekst = (EditText) findViewById(R.id.txtTekst);
-        btnGem = (Button) findViewById(R.id.btnGem);
+        txtText = (EditText) findViewById(R.id.txtText);
+        btnSave = (Button) findViewById(R.id.btnSave);
         list = (ListView) findViewById(R.id.list);
 
-        tekstDao = new TekstDao(this, null, null, 1);
+        textDao = new TextDao(this, null, null, 1);
         fillList();
     }
 
     private void fillList() {
-        List<Tekst> values = tekstDao.getAllTekster();
+        List<Text> values = textDao.getAllTexts();
 
         // use the SimpleCursorAdapter to show the
         // elements in a ListView
-        ArrayAdapter<Tekst> adapter = new ArrayAdapter<Tekst>(this,
+        ArrayAdapter<Text> adapter = new ArrayAdapter<Text>(this,
                 android.R.layout.simple_list_item_1, values);
         list.setAdapter(adapter);
     }
 
-    public void newTekst (View view) {
-        tekstDao = new TekstDao(this, null, null, 1);
+    public void newText(View view) {
+        textDao = new TextDao(this, null, null, 1);
 
-        Tekst tekst = new Tekst(txtTekst.getText().toString());
+        Text text = new Text(txtText.getText().toString());
 
-        tekstDao.addTekst(tekst);
-        txtTekst.setText("");
+        textDao.addText(text);
+        txtText.setText("");
 
         fillList();
     }

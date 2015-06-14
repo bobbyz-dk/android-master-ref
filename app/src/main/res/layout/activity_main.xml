@@ -25,7 +25,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gem en tekst"
+        android:text="Text to insert"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
@@ -33,14 +33,14 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/txtTekst"
+        android:id="@+id/txtText"
         android:layout_alignParentEnd="true"
         android:inputType="text"
         android:editable="false"
         android:enabled="true"
-        android:layout_alignStart="@+id/btnGem"
+        android:layout_alignStart="@+id/btnSave"
         android:layout_alignParentTop="true"
-        android:hint="skriv her"
+        android:hint="enter here"
         android:minWidth="160dp" />
 
     </LinearLayout>
@@ -48,9 +48,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gem Tekst"
+        android:text="Insert"
         android:id="@+id/btnGem"
-        android:onClick="newTekst"
+        android:onClick="newText"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:padding="10dp" />
@@ -60,7 +60,7 @@
     <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Tekster fra SQLite"
+    android:text="Texts"
     android:id="@+id/texts"
     android:layout_alignParentTop="true"
     android:layout_alignParentStart="true"
